@@ -1,36 +1,51 @@
 <template>
   <div class="recommend">
-    <div class="recommend-content">
-      <div class="slider-wrapper">
-        <slider>
-          <div v-if="recommends.length" v-for="item in recommends" :key="item.id">
-            <a :href="item.linkUrl">
-              <img :src="item.picUrl"/>
-            </a>
-          </div>
-        </slider>
+    <scroll class="recommend-content" :data="discList">
+      <div>
+        <div class="slider-wrapper">
+          <slider>
+            <div v-if="recommends.length" v-for="item in recommends" :key="item.id">
+              <a :href="item.linkUrl">
+                <img :src="item.picUrl"/>
+              </a>
+            </div>
+          </slider>
+        </div>
+        <div class="recommend-list">
+          <h1 class="list-title">Hotest Album Recommend</h1>
+          <ul>
+            <li v-for="item in discList" class="item" :key="item.dissid">
+              <div class="icon">
+                <img width="60" height="55" :src="item.imgurl"/>
+              </div>
+              <div class="text">
+                <h2 class="name" v-html="item.creator.name"></h2>
+                <p class="desc" v-html="item.dissname"></p>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="recommend-list">
-        <h1 class="list-title">Hotest Album Recommend</h1>
-      </div>
-      <ul>
-      </ul>
-    </div>
+    </scroll>
   </div>
 </template>
 
 <script>
-import { getRecommend } from 'api/data/recommend'
+import { getRecommend, getDiscList } from 'api/data/recommend'
 import Slider from 'base/slider/slider'
+import Scroll from 'base/scroll/scroll'
 
 export default {
   data () {
     return {
-      recommends: []
+      recommends: [],
+      discList: []
     }
   },
   created () {
     this._getRecommend()
+
+    this._getDiscList()
   },
   methods: {
     _getRecommend () {
@@ -41,10 +56,20 @@ export default {
         const data = json
         this.recommends = data
       })
+    },
+    _getDiscList () {
+      const result = getDiscList()
+      result.then(res => {
+        return res.clone().json()
+      }).then(json => {
+        const data = json
+        this.discList = data
+      })
     }
   },
   components: {
-    Slider
+    Slider,
+    Scroll
   }
 }
 </script>
@@ -71,4 +96,26 @@ export default {
           text-align: center
           font-size: $font-size-medium
           color: $color-theme
+        .item
+          display: flex
+          box-sizing: border-box
+          align-items: center
+          padding: 0 20px 20px 20px
+          .icon
+            flex: 0 0 60px
+            width: 60px
+            padding-right: 20px
+          .text
+            display: flex
+            flex-direction: column
+            justify-content: center
+            flex: 1
+            line-height: 20px
+            overflow: hidden
+            font-size: $font-size-medium
+            .name
+              margin-bottom: 10px
+              color: $color-text
+            .desc
+              color: $color-text-d
 </style>

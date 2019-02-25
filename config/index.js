@@ -15,6 +15,10 @@ module.exports = {
         target: 'http://localhost:3000',
         changeOrigin: true
       }
+      // '/qq': {
+      //   target: 'https://c.y.qq.com/splcloud/fcgi-bin/fcg_musiclist_getmyfav.fcg',
+      //   changeOrigin: true
+      // }
     },
 
     // Various Dev Server settings
