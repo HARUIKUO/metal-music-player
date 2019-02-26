@@ -1,12 +1,12 @@
 <template>
   <div class="recommend">
-    <scroll class="recommend-content" :data="discList">
+    <scroll ref="scroll" class="recommend-content" :data="discList">
       <div>
         <div class="slider-wrapper">
           <slider>
             <div v-if="recommends.length" v-for="item in recommends" :key="item.id">
               <a :href="item.linkUrl">
-                <img :src="item.picUrl"/>
+                <img @load="loadImage" :src="item.picUrl"/>
               </a>
             </div>
           </slider>
@@ -16,7 +16,7 @@
           <ul>
             <li v-for="item in discList" class="item" :key="item.dissid">
               <div class="icon">
-                <img width="60" height="55" :src="item.imgurl"/>
+                <img width="60" height="55" v-lazy="item.imgurl"/>
               </div>
               <div class="text">
                 <h2 class="name" v-html="item.creator.name"></h2>
@@ -26,14 +26,18 @@
           </ul>
         </div>
       </div>
+      <div class="loading-container" v-show="!discList.length">
+        <loading></loading>
+      </div>
     </scroll>
   </div>
 </template>
 
 <script>
-import { getRecommend, getDiscList } from 'api/data/recommend'
+import {getRecommend, getDiscList} from 'api/data/recommend'
 import Slider from 'base/slider/slider'
 import Scroll from 'base/scroll/scroll'
+import Loading from 'base/loading/loading'
 
 export default {
   data () {
@@ -65,11 +69,18 @@ export default {
         const data = json
         this.discList = data
       })
+    },
+    loadImage () {
+      if (!this.checkLoaded) {
+        this.$refs.scroll.refresh()
+        this.checkLoaded = true
+      }
     }
   },
   components: {
     Slider,
-    Scroll
+    Scroll,
+    Loading
   }
 }
 </script>
@@ -118,4 +129,9 @@ export default {
               color: $color-text
             .desc
               color: $color-text-d
+      .loading-container
+        position: absolute
+        width: 100%
+        top: 50%
+        transform: translateY(-50%)
 </style>

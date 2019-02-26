@@ -6,6 +6,7 @@ const router = new Router()
 
 const recommendData = require('./mock/recommend')
 const discData = require('./mock/disc')
+const singerData = require('./mock/singer')
 
 router.get('/api/recommend', (ctx, next) => {
   ctx.body = recommendData
@@ -13,6 +14,10 @@ router.get('/api/recommend', (ctx, next) => {
 
 router.get('/api/disc', (ctx, next) => {
   ctx.body = discData
+})
+
+router.get('/api/singer', (ctx, next) => {
+  ctx.body = singerData
 })
 
 
