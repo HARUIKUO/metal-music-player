@@ -7,6 +7,7 @@ const router = new Router()
 const recommendData = require('./mock/recommend')
 const discData = require('./mock/disc')
 const singerData = require('./mock/singer')
+const songListData = require('./mock/songlist')
 
 router.get('/api/recommend', (ctx, next) => {
   ctx.body = recommendData
@@ -20,6 +21,11 @@ router.get('/api/singer', (ctx, next) => {
   ctx.body = singerData
 })
 
+router.get('/api/singer/:singerid', (ctx, next) => {
+  console.log(ctx.params);
+
+  ctx.body = songListData
+})
 
 // router.get('/api/disclist', (ctx, next) => {
 //   var url = 'https://c.y.qq.com/splcloud/fcgi-bin/fcg_musiclist_getmyfav.fcg'

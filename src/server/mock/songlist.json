@@ -1,0 +1,156 @@
+{
+  "list": {
+    "musicData": [
+      {
+        "songid": "200038228",
+        "songmid": "200038228",
+        "songname": "カラノココロ (空虚的心)",
+        "albumname": "カラノココロ",
+        "albumid": "0039rxKo4W6rJH",
+        "interval": "265",
+        "singer": [
+          {
+            "id": "1199",
+            "mid": "004Bhmaq2Sj88P",
+            "name": "Anly"
+          }
+        ]
+      },
+      {
+        "songid": "200038228",
+        "songmid": "200038229",
+        "songname": "カラノココロ (空虚的心) (Acoustic Version)",
+        "albumname": "この闇を照らす光のむこうに (照亮黑暗的光之彼岸)",
+        "albumid": "0039rxKo4W6rJH",
+        "interval": "265",
+        "singer": [
+          {
+            "id": "1199",
+            "mid": "004Bhmaq2Sj88P",
+            "name": "Anly"
+          }
+        ]
+      },
+      {
+        "songid": "228772775",
+        "songmid": "228772775",
+        "songname": "カラノココロ (空虚的心) (NARUTO オープニング Ver.)",
+        "albumname": "カラノココロ-NARUTO オープニング Ver.- (空虚的心-火影忍者片头曲 Ver.-)",
+        "albumid": "0039rxKo4W6rJH",
+        "interval": "90",
+        "singer": [
+          {
+            "id": "1199",
+            "mid": "004Bhmaq2Sj88P",
+            "name": "Anly"
+          }
+        ]
+      },
+      {
+        "songid": "213045809",
+        "songmid": "213045809",
+        "songname": "Beautiful",
+        "albumname": "Beautiful",
+        "albumid": "0039rxKo4W6rJH",
+        "interval": "225",
+        "singer": [
+          {
+            "id": "1199",
+            "mid": "004Bhmaq2Sj88P",
+            "name": "Anly"
+          }
+        ]
+      },
+      {
+        "songid": "105699025",
+        "songmid": "105699025",
+        "songname": "笑顔",
+        "albumname": "笑顔/いいの",
+        "albumid": "0039rxKo4W6rJH",
+        "interval": "279",
+        "singer": [
+          {
+            "id": "1199",
+            "mid": "004Bhmaq2Sj88P",
+            "name": "Anly"
+          }
+        ]
+      },
+      {
+        "songid": "224464562",
+        "songmid": "224464562",
+        "songname": "Sunshine",
+        "albumname": "Sunshine",
+        "albumid": "0039rxKo4W6rJH",
+        "interval": "209",
+        "singer": [
+          {
+            "id": "1199",
+            "mid": "004Bhmaq2Sj88P",
+            "name": "Anly"
+          }
+        ]
+      },
+      {
+        "songid": "107197555",
+        "songmid": "107197555",
+        "songname": "EMERGENCY",
+        "albumname": "EMERGENCY",
+        "albumid": "0039rxKo4W6rJH",
+        "interval": "224",
+        "singer": [
+          {
+            "id": "1199",
+            "mid": "004Bhmaq2Sj88P",
+            "name": "Anly"
+          }
+        ]
+      },
+      {
+        "songid": "105007439",
+        "songmid": "105007439",
+        "songname": "太陽に笑え (向太阳微笑)",
+        "albumname": "太陽に笑え (向太阳微笑)",
+        "albumid": "0039rxKo4W6rJH",
+        "interval": "237",
+        "singer": [
+          {
+            "id": "1199",
+            "mid": "004Bhmaq2Sj88P",
+            "name": "Anly"
+          }
+        ]
+      },
+      {
+        "songid": "200852535",
+        "songmid": "200852535",
+        "songname": "この闇を照らす光のむこうに (照亮黑暗的光之彼岸)",
+        "albumname": "この闇を照らす光のむこうに (照亮黑暗的光之彼岸)",
+        "albumid": "0039rxKo4W6rJH",
+        "interval": "322",
+        "singer": [
+          {
+            "id": "1199",
+            "mid": "004Bhmaq2Sj88P",
+            "name": "Anly"
+          }
+        ]
+      },
+      {
+        "songid": "202950516",
+        "songmid": "202950516",
+        "songname": "北斗七星",
+        "albumname": "北斗七星",
+        "albumid": "0039rxKo4W6rJH",
+        "interval": "355",
+        "singer": [
+          {
+            "id": "1199",
+            "mid": "004Bhmaq2Sj88P",
+            "name": "Anly"
+          }
+        ]
+      }
+    ]
+  }
+}

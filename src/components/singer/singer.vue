@@ -1,6 +1,7 @@
 <template>
   <div class="singer">
-    <list-view :data="singers"></list-view>
+    <list-view @select="selectSinger" :data="singers"></list-view>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -8,8 +9,9 @@
 import {getSingerList} from 'api/data/singer'
 import Singer from 'common/js/singer'
 import ListView from 'base/listview/listview'
+import {mapMutations} from 'vuex'
 
-const HOT_NAME = 'hot'
+const HOT_NAME = '热门'
 const HOT_SINGER_LEN = 10
 
 export default {
@@ -22,16 +24,19 @@ export default {
     this._getSingerList()
   },
   methods: {
+    selectSinger (singer) {
+      this.$router.push({
+        path: `/singer/${singer.id}`
+      })
+      this.setSinger(singer)
+    },
     _getSingerList () {
       const result = getSingerList()
       result.then(res => {
-        console.log(res.clone().json())
         return res.clone().json()
       }).then(json => {
         const data = json
-        console.log(data.singerList.data.singerlist)
         this.singers = this._normalizeSinger(data.singerList.data.singerlist)
-        console.log(this._normalizeSinger(this.singers))
       })
     },
     _normalizeSinger (list) {
@@ -62,13 +67,11 @@ export default {
           name: item.singer_name
         }))
       })
-      console.log(map)
 
       let hot = []
       let ret = []
       for (let key in map) {
         let val = map[key]
-        console.log(val.title)
         if (val.title.match(/[a-zA-Z]/)) {
           ret.push(val)
         } else if (val.title === HOT_NAME) {
@@ -79,7 +82,10 @@ export default {
         return a.title.charCodeAt(0) - b.title.charCodeAt(0)
       })
       return hot.concat(ret)
-    }
+    },
+    ...mapMutations({
+      setSinger: 'SET_SINGER'
+    })
   },
   components: {
     ListView
@@ -90,7 +96,7 @@ export default {
 <style scoped lang="stylus" rel="stylesheet/stylus">
   .singer
     position: fixed
-    height: 550px
+    top: 88px
     bottom: 0
     width: 100%
 </style>

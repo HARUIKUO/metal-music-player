@@ -3,14 +3,14 @@
     <router-link tag="div" class="tab-item" to="/recommend">
       <span class="tab-link">Recommend</span>
     </router-link>
+    <router-link tag="div" class="tab-item" to="/singer">
+      <span class="tab-link">Singer</span>
+    </router-link>
     <router-link tag="div" class="tab-item" to="/rank">
       <span class="tab-link">Rank</span>
     </router-link>
     <router-link tag="div" class="tab-item" to="/search">
       <span class="tab-link">Search</span>
-    </router-link>
-    <router-link tag="div" class="tab-item" to="/singer">
-      <span class="tab-link">Singer</span>
     </router-link>
   </div>
 </template>
