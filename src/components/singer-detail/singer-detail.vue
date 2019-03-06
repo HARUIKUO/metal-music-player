@@ -42,21 +42,17 @@ export default {
         return res.clone().json()
       }).then(json => {
         const data = json
-        console.log(data.list.musicData)
         this.songs = data.list.musicData
-        console.log(this.songs)
       })
     },
     _normalizeSongs (list) {
       let ret = []
       list.forEach((item, index) => {
-        console.log(item)
         // console.log(musicData)
         if (item.songid && item.albummid) {
           ret.push(createSong(item))
         }
       })
-      console.log(ret)
       return ret
     }
   },
