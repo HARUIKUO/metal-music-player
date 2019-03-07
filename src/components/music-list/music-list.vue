@@ -30,10 +30,12 @@ import Scroll from 'base/scroll/scroll'
 import SongList from 'base/song-list/song-list'
 import Loading from 'base/loading/loading'
 import {mapActions} from 'vuex'
+import {playlistMixin} from 'common/js/mixin'
 
 const RESERVED_HEIGHT = 40
 
 export default {
+  mixins: [playlistMixin],
   props: {
     bgImage: {
       type: String,
@@ -75,6 +77,11 @@ export default {
     },
     scroll (pos) {
       this.scrollY = pos.y
+    },
+    handlePlaylist (playList) {
+      const bottom = playList.length > 0 ? '40px' : ''
+      this.$refs.list.$el.style.bottom = bottom
+      this.$refs.list.refresh()
     },
     // 调用actions传入状态，打开播放器，播放列表list
     selectItem (item, index) {

@@ -24,7 +24,7 @@
         <div class="bottom">
           <div class="progress-wrapper">
             <span class="time time-l">{{format(currentTime)}}</span>
-            <div class="progress-bar-wrapper" :percent="percent">
+            <div class="progress-bar-wrapper" @percentChange="onProgressBarChange" :percent="percent">
               <progress-bar></progress-bar>
             </div>
             <span class="time time-r">{{format(currentSong.interval)}}</span>
@@ -66,7 +66,7 @@
         </div>
       </div>
     </transition>
-    <audio ref="audio" src="currentSong.url" @canplay="ready" @error="error" @timeupdate="updateTime"></audio>
+    <audio ref="audio" :src="currentSong.url" @play="ready" @error="error" @timeupdate="updateTime"></audio>
   </div>
 </template>
 
@@ -166,6 +166,10 @@ export default {
         len++
       }
       return num
+    },
+    // 音乐播放进度拖动
+    onProgressBarChange (percent) {
+      this.$refs.audio.currentTime = this.currentSong.interval * percent
     },
     ...mapMutations({
       setFullScreen: 'SET_FULL_SCREEN',
