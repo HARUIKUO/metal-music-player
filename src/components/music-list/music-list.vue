@@ -76,6 +76,7 @@ export default {
     scroll (pos) {
       this.scrollY = pos.y
     },
+    // 调用actions传入状态，打开播放器，播放列表list
     selectItem (item, index) {
       this.selectPlay({
         list: this.songs,
