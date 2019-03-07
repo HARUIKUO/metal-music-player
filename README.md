@@ -29,4 +29,12 @@ npm test
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
-![ABC](http://www.baidu.com/img/bdlogo.gif) 
+![ABC](https://github.com/HARUIKUO/metal-music-player/blob/master/src/common/music1.jpg)
+
+![ABC](https://github.com/HARUIKUO/metal-music-player/blob/master/src/common/music2.jpg)
+
+![ABC](https://github.com/HARUIKUO/metal-music-player/blob/master/src/common/music3.jpg)
+
+![ABC](https://github.com/HARUIKUO/metal-music-player/blob/master/src/common/music4.jpg)
+
+![ABC](https://github.com/HARUIKUO/metal-music-player/blob/master/src/common/music5.jpg)
