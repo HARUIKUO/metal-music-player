@@ -37,7 +37,7 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 ![ABC](https://github.com/HARUIKUO/metal-music-player/blob/master/src/common/music2.jpg)
 
-歌手详情的页面，数据模拟qq音乐的线上接口，上部为歌手背景图，下部为歌曲列表，显示可以支持动态的响应，歌单向上滚动拖拽，背景图会自响应变化
+歌手详情的页面（Anly小姐姐最棒！！！），数据模拟qq音乐的线上接口，上部为歌手背景图，下部为歌曲列表，显示可以支持动态的响应，歌单向上滚动拖拽，背景图会自响应变化
 
 ![ABC](https://github.com/HARUIKUO/metal-music-player/blob/master/src/common/music3.jpg)
 
