@@ -33,6 +33,8 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 ![ABC](https://github.com/HARUIKUO/metal-music-player/blob/master/src/common/music1.jpg)
 
+![ABC](https://github.com/HARUIKUO/metal-music-player/blob/master/src/common/music6.jpg)
+
 前端的歌手列表页面，数据取自线上的qq音乐接口，koa-router代理，有侧边栏导航功能，点击可进入歌手详情
 
 ![ABC](https://github.com/HARUIKUO/metal-music-player/blob/master/src/common/music2.jpg)
@@ -48,3 +50,5 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 排行榜的前端页面，数据取自qq音乐的排行接口，koa-router代理
 
 ![ABC](https://github.com/HARUIKUO/metal-music-player/blob/master/src/common/music5.jpg)
+
+![ABC](https://github.com/HARUIKUO/metal-music-player/blob/master/src/common/music7.jpg)
