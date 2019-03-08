@@ -1,14 +1,20 @@
 <template>
   <transition name="slide">
-    <music-list :title="title" :bg-image="bgImage"></music-list>
+    <music-list :title="title" :bg-image="bgImage" :songs="songs"></music-list>
   </transition>
 </template>
 
 <script>
 import MusicList from '../music-list/music-list'
 import {mapGetters} from 'vuex'
+import {getDiscDetail} from 'api/data/recommend'
 
 export default {
+  data () {
+    return {
+      songs: []
+    }
+  },
   computed: {
     title () {
       return this.disc.dissname
@@ -19,6 +25,26 @@ export default {
     ...mapGetters([
       'disc'
     ])
+  },
+  created () {
+    this._getDiscDetail()
+  },
+  methods: {
+    _getDiscDetail () {
+      if (!this.disc.dissid) {
+        this.$router.push('/recommend')
+        return
+      }
+      const result = getDiscDetail()
+      console.log(result)
+      result.then(res => {
+        return res.clone().json()
+      }).then(json => {
+        const data = json
+        console.log(data)
+        this.songs = data.list.musicData
+      })
+    }
   },
   components: {
     MusicList

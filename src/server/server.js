@@ -9,6 +9,7 @@ const discData = require('./mock/disc')
 const singerData = require('./mock/singer')
 const songListData = require('./mock/songlist')
 const rankData = require('./mock/rank')
+const hotSearchData = require('./mock/search')
 
 router.get('/api/recommend', (ctx, next) => {
   ctx.body = recommendData
@@ -24,6 +25,10 @@ router.get('/api/singer', (ctx, next) => {
 
 router.get('/api/rank', (ctx, next) => {
   ctx.body = rankData
+})
+
+router.get('/api/hotsearch', (ctx, next) => {
+  ctx.body = hotSearchData
 })
 
 router.get('/api/singer/:singerid', (ctx, next) => {
