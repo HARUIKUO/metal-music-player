@@ -42,9 +42,11 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 ![ABC](https://github.com/HARUIKUO/metal-music-player/blob/master/src/common/music7.jpg)
 
 搜索页面的基本样式
+
 ![ABC](https://github.com/HARUIKUO/metal-music-player/blob/master/src/common/music8.jpg)
 
 个人用户页面的基本样式
+
 ![ABC](https://github.com/HARUIKUO/metal-music-player/blob/master/src/common/music9.jpg)
 
 ## Build Setup
