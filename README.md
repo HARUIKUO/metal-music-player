@@ -1,30 +1,18 @@
 # metal
 
 > A Vue.js project
-
-## Build Setup
-
-``` bash
-# install dependencies
+# 本地预览方式
+# 将项目clone至本地
+# 在bash下打开metal文件夹
+```
 npm install
 
-# serve with hot reload at localhost:8080
-npm run dev
+npm satrt
 
-# build for production with minification
-npm run build
+打开metal下server文件夹
+node server.js
 
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
+浏览器打开 http://localhost:8080 即可
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
@@ -52,3 +40,34 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 ![ABC](https://github.com/HARUIKUO/metal-music-player/blob/master/src/common/music5.jpg)
 
 ![ABC](https://github.com/HARUIKUO/metal-music-player/blob/master/src/common/music7.jpg)
+
+搜索页面的基本样式
+![ABC](https://github.com/HARUIKUO/metal-music-player/blob/master/src/common/music8.jpg)
+
+个人用户页面的基本样式
+![ABC](https://github.com/HARUIKUO/metal-music-player/blob/master/src/common/music9.jpg)
+
+## Build Setup
+
+``` bash
+# install dependencies
+npm install
+
+# serve with hot reload at localhost:8080
+npm run dev
+
+# build for production with minification
+npm run build
+
+# build for production and view the bundle analyzer report
+npm run build --report
+
+# run unit tests
+npm run unit
+
+# run e2e tests
+npm run e2e
+
+# run all tests
+npm test
+```
